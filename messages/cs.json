@@ -1,0 +1,16 @@
+{
+  "Meta": {
+    "title": "Frontend vývojářka | React & Next.js",
+    "description": "Portfolio frontend vývojářky Aleny zaměřené na React, Next.js a moderní webové aplikace. Prohlédněte si vybrané projekty, dovednosti a zkušenosti."
+  },
+  "HomePage": {
+    "introPrefix": "Zdravím 👋 jsem",
+    "introName": "Alena Češková",
+    "headerSubtitle": "Objevte mé projekty a dovednosti",
+    "features": [
+      "Frontend developer zaměřený na React a Next.js.",
+      "Stavím moderní webové aplikace s důrazem na jednoduchost, výkon a dobrý uživatelský zážitek.",
+      "Mimo kód trávím čas na lezecké stěně — a stejně jako při lezení mě baví hledat řešení a posouvat se dál."
+    ]
+  }
+}
