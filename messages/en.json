@@ -1,0 +1,16 @@
+{
+  "Meta": {
+    "title": "Frontend Developer | React & Next.js",
+    "description": "Portfolio of frontend developer Alena focused on React, Next.js, and modern web applications. Explore selected projects, skills, and experience."
+  },
+  "HomePage": {
+    "introPrefix": "Hi 👋 I'm",
+    "introName": "Alena Češková",
+    "headerSubtitle": "Discover my projects and skills",
+    "features": [
+      "Frontend developer focused on React and Next.js.",
+      "I build modern web applications with an emphasis on simplicity, performance, and great user experience.",
+      "Outside of coding, I spend time at the climbing gym — and just like in climbing, I enjoy finding solutions and pushing myself further."
+    ]
+  }
+}

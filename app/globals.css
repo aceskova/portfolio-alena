@@ -1,8 +1,16 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f5f3ef; /* #f7f6f3 hlavní pozadí */
+  --foreground: #1f2933; /* text */
+
+  --card: #ffffff; /* karta / surface */
+  --muted: #6b7280; /* sekundární text */
+  --border: #e7e5e4; /* jemné linie */
+
+  /* --accent: #d6d3d1;      hover / subtle highlight */
+  --accent: #7a1f2a;
+  --accent-strong: #a8a29e; /* aktivní prvky */
 }
 
 @theme inline {
@@ -14,8 +22,15 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #0f172a; /* deep blue-gray */
+    --foreground: #e5e7eb; /* text */
+
+    --card: #111827; /* surface */
+    --muted: #9ca3af; /* secondary text */
+    --border: #1f2937; /* borders */
+
+    --accent: #7a1f2a; /* hover #1e293b; */
+    --accent-strong: #334155; /* active */
   }
 }
 
