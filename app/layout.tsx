@@ -5,7 +5,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getLocale } from 'next-intl/server';
 import { ReactNode } from 'react';
 import { getTranslations } from 'next-intl/server';
-import LocaleSwitcher from '@/components/localeSwitcher';
+import Navbar from '@/components/navBar';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -40,7 +40,7 @@ export default async function RootLayout({
     >
       <body className="min-h-full flex flex-col">
         <NextIntlClientProvider>
-          <LocaleSwitcher />
+          <Navbar />
           {children}
         </NextIntlClientProvider>
       </body>

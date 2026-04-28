@@ -12,5 +12,36 @@
       "Stavím moderní webové aplikace s důrazem na jednoduchost, výkon a dobrý uživatelský zážitek.",
       "Mimo kód trávím čas na lezecké stěně — a stejně jako při lezení mě baví hledat řešení a posouvat se dál."
     ]
+  },
+  "Navigation": {
+    "about": "O mně",
+    "projects": "Projekty",
+    "skills": "Dovednosti",
+    "contact": "Kontakt",
+    "menu": "Menu",
+    "menuDescription": "Hlavní navigace webu",
+    "openMenu": "Otevřít menu"
+  },
+  "Pages": {
+    "about": {
+      "eyebrow": "O mně",
+      "title": "Frontend vývojářka se zázemím v Reactu a Next.js",
+      "description": "Tvořím moderní webové aplikace s důrazem na přehledné rozhraní, výkon a udržitelné komponenty. Baví mě propojovat technickou přesnost s dobrým uživatelským zážitkem."
+    },
+    "projects": {
+      "eyebrow": "Projekty",
+      "title": "Vybrané projekty a případové studie",
+      "description": "Tady postupně představím projekty, na kterých ukazuji práci s Reactem, Next.js, typováním, API integracemi a návrhem rozhraní."
+    },
+    "skills": {
+      "eyebrow": "Dovednosti",
+      "title": "Technologie, které používám při vývoji",
+      "description": "Zaměřuji se na frontend ekosystém kolem Reactu, Next.js, TypeScriptu a Tailwind CSS. K tomu přidávám testování, práci s API a praktické nástroje pro vývoj."
+    },
+    "contact": {
+      "eyebrow": "Kontakt",
+      "title": "Pojďme se propojit",
+      "description": "Pokud hledáte frontend vývojářku pro webovou aplikaci, portfolio projekt nebo dlouhodobou spolupráci, ráda si poslechnu, co stavíte."
+    }
   }
 }

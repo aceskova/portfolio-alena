@@ -22,8 +22,8 @@ export default function LocaleSwitcher() {
   }
 
   return (
-    <div className="fixed right-4 top-4 z-50 rounded-full border border-zinc-200/80 bg-white/80 p-1 shadow-lg shadow-zinc-950/5 backdrop-blur-xl dark:border-white/10 dark:bg-zinc-950/75 dark:shadow-black/30 sm:right-6 md:right-[calc((100vw-48rem)/2+1.5rem)]">
-      <div className="flex items-center gap-1">
+    <div className="rounded-full border border-border bg-background/60 p-0.5 backdrop-blur">
+      <div className="flex items-center gap-0.5">
         {locales.map((locale) => (
           <button
             type="button"
@@ -32,16 +32,13 @@ export default function LocaleSwitcher() {
             disabled={locale.code === activeLocale}
             aria-label={locale.code}
             aria-pressed={locale.code === activeLocale}
-            className={`flex h-9 min-w-16 items-center justify-center gap-1.5 rounded-full px-3 text-sm font-semibold transition duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-900 dark:focus-visible:outline-white ${
+            className={`flex h-8 min-w-10 items-center justify-center rounded-full px-2 text-xs font-semibold uppercase tracking-wide transition duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-500 ${
               locale.code === activeLocale
-                ? 'cursor-default bg-sky-600 dark:bg-sky-400 text-white shadow-sm shadow-sky-500/25'
-                : 'cursor-pointer text-zinc-500 hover:bg-zinc-100 hover:text-zinc-950 dark:text-zinc-400 dark:hover:bg-white/10 dark:hover:text-white'
+                ? 'cursor-default bg-sky-600 text-white shadow-sm shadow-sky-600/20 dark:bg-sky-400 dark:text-slate-950'
+                : 'cursor-pointer text-muted-foreground hover:bg-accent hover:text-foreground'
             }`}
           >
-            <span aria-hidden="true" className="text-base leading-none">
-              {locale.label}
-            </span>
-            <span className="leading-none">{locale.code.toUpperCase()}</span>
+            {locale.code}
           </button>
         ))}
       </div>

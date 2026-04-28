@@ -12,5 +12,36 @@
       "I build modern web applications with an emphasis on simplicity, performance, and great user experience.",
       "Outside of coding, I spend time at the climbing gym — and just like in climbing, I enjoy finding solutions and pushing myself further."
     ]
+  },
+  "Navigation": {
+    "about": "About",
+    "projects": "Projects",
+    "skills": "Skills",
+    "contact": "Contact",
+    "menu": "Menu",
+    "menuDescription": "Main site navigation",
+    "openMenu": "Open menu"
+  },
+  "Pages": {
+    "about": {
+      "eyebrow": "About",
+      "title": "Frontend developer with a focus on React and Next.js",
+      "description": "I build modern web applications with clear interfaces, solid performance, and maintainable components. I enjoy combining technical precision with a thoughtful user experience."
+    },
+    "projects": {
+      "eyebrow": "Projects",
+      "title": "Selected projects and case studies",
+      "description": "This section will grow into a collection of projects showing React, Next.js, TypeScript, API integrations, and interface design in practice."
+    },
+    "skills": {
+      "eyebrow": "Skills",
+      "title": "Technologies I use to build web applications",
+      "description": "I focus on the frontend ecosystem around React, Next.js, TypeScript, and Tailwind CSS, with practical experience in testing, API work, and development tooling."
+    },
+    "contact": {
+      "eyebrow": "Contact",
+      "title": "Let's connect",
+      "description": "If you are looking for a frontend developer for a web application, portfolio project, or longer-term collaboration, I would be happy to hear what you are building."
+    }
   }
 }
