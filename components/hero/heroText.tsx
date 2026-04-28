@@ -13,7 +13,7 @@ export default function HeroText() {
 
       <div className="mt-8 space-y-4 text-center md:border-l md:border-sky-600/80 dark:md:border-sky-400/80 md:pl-6 md:text-left">
         {t.raw('features').map((feature: string) => (
-          <p key={feature} className="text-base leading-8 text-zinc-600 dark:text-zinc-300">
+          <p key={feature} className="text-base leading-8 text-muted-foreground">
             {feature}
           </p>
         ))}
