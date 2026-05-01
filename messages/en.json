@@ -18,6 +18,9 @@
     "projects": "Projects",
     "skills": "Skills",
     "contact": "Contact",
+    "cv": "CV",
+    "downloadCv": "Download CV",
+    "downloadCvAria": "Download CV in English",
     "menu": "Menu",
     "menuDescription": "Main site navigation",
     "openMenu": "Open menu"
