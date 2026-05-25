@@ -21,6 +21,8 @@
     "cv": "CV",
     "downloadCv": "Download CV",
     "downloadCvAria": "Download CV in English",
+    "switchToLightTheme": "Switch to light theme",
+    "switchToDarkTheme": "Switch to dark theme",
     "menu": "Menu",
     "menuDescription": "Main site navigation",
     "openMenu": "Open menu"
