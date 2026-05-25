@@ -5,6 +5,8 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
+  color-scheme: light;
+
   /* #f7f6f3 hlavní pozadí */ /* text */
 
   --card: oklch(1 0 0); /* karta / surface */
@@ -88,30 +90,31 @@
   --radius-4xl: calc(var(--radius) * 2.6);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0f172a;
-    --foreground: #e5e7eb;
-    --card: #111827;
-    --card-foreground: #e5e7eb;
-    --popover: #111827;
-    --popover-foreground: #e5e7eb;
-    --primary: #e5e7eb;
-    --primary-foreground: #111827;
-    --secondary: #1e293b;
-    --secondary-foreground: #e5e7eb;
-    --muted: #1e293b;
-    --muted-foreground: #9ca3af;
-    --accent: #1e293b;
-    --accent-foreground: #e5e7eb;
-    --border: #1f2937;
-    --input: #334155;
-    --ring: #64748b;
-    --accent-strong: #334155;
-  }
+.light {
+  color-scheme: light;
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: oklch(0.205 0 0);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+  --accent-strong: #a8a29e;
 }
 
 .dark {
+  color-scheme: dark;
+
   --background: oklch(0.145 0 0);
 
   --foreground: oklch(0.985 0 0);

@@ -6,6 +6,8 @@ import { getLocale } from 'next-intl/server';
 import { ReactNode } from 'react';
 import { getTranslations } from 'next-intl/server';
 import Navbar from '@/components/navBar';
+import Script from 'next/script';
+import { defaultTheme, themeCookieName } from '@/lib/theme';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -36,11 +38,25 @@ export default async function RootLayout({
   return (
     <html
       lang={locale}
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${defaultTheme} h-full antialiased`}
+      suppressHydrationWarning
     >
       <body className="min-h-full flex flex-col">
+        <Script id="theme-init" strategy="beforeInteractive">
+          {`
+try {
+  var match = document.cookie.match(/(?:^|; )${themeCookieName}=([^;]*)/);
+  var cookieTheme = match ? decodeURIComponent(match[1]) : '';
+  var theme = cookieTheme === 'light' || cookieTheme === 'dark'
+    ? cookieTheme
+    : window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  document.documentElement.classList.remove('light', 'dark');
+  document.documentElement.classList.add(theme);
+} catch (_) {}
+          `.trim()}
+        </Script>
         <NextIntlClientProvider>
-          <Navbar />
+          <Navbar initialTheme={defaultTheme} />
           {children}
         </NextIntlClientProvider>
       </body>

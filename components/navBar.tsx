@@ -17,6 +17,8 @@ import LocaleSwitcher from './localeSwitcher';
 import Image from 'next/image';
 import { useLocale, useTranslations } from 'next-intl';
 import { type AppLocale } from '@/i18n/config';
+import ThemeSwitcher from '@/components/themeSwitcher';
+import { type ThemeMode } from '@/lib/theme';
 
 const navItems = [
   { href: '/about', labelKey: 'about' },
@@ -46,7 +48,7 @@ function getCvDownload(locale: AppLocale) {
   };
 }
 
-export default function Navbar() {
+export default function Navbar({ initialTheme }: { initialTheme: ThemeMode }) {
   const t = useTranslations('Navigation');
   const pathname = usePathname();
   const locale = useLocale() as AppLocale;
@@ -67,6 +69,13 @@ export default function Navbar() {
 
         <div className="flex items-center gap-2">
           <CvDownloadLink cv={cvDownload} label={t('cv')} ariaLabel={t('downloadCvAria')} />
+          <ThemeSwitcher
+            initialTheme={initialTheme}
+            labels={{
+              light: t('switchToLightTheme'),
+              dark: t('switchToDarkTheme'),
+            }}
+          />
           <LocaleSwitcher />
           <MobileNav
             items={navigationLinks}
