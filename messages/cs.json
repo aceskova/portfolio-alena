@@ -172,6 +172,145 @@
             }
           ]
         }
+      },
+      "jablonecSea": {
+        "title": "Jablonec Sea",
+        "pitch": "Mobilní Expo aplikace pro rychlé zobrazení aktuální teploty vody a vzduchu na přehradě Mšeno v Jablonci nad Nisou. Projekt ukazuje práci s React Native, externím zdrojem dat, parsováním HTML, stavem načítání a světlým/tmavým režimem.",
+        "links": {
+          "items": [
+            {
+              "label": "Aplikace",
+              "href": "",
+              "icon": "web"
+            },
+            {
+              "label": "GitHub",
+              "href": "",
+              "icon": "github"
+            }
+          ]
+        },
+        "summary": {
+          "items": [
+            {
+              "label": "Role",
+              "value": "Návrh a implementace mobilní aplikace, datové služby, theme systému a testů."
+            },
+            {
+              "label": "Cíl",
+              "value": "Vytvořit jednoduchý mobilní přehled aktuálních podmínek na přehradě bez nutnosti hledat data na webu."
+            },
+            {
+              "label": "Zaměření",
+              "value": "React Native UI, Expo Router, TanStack Query, parsování veřejného HTML zdroje, chybové stavy a testování."
+            }
+          ]
+        },
+        "stack": {
+          "title": "Stack",
+          "items": [
+            "Expo",
+            "React Native",
+            "Expo Router",
+            "TypeScript",
+            "TanStack Query",
+            "AsyncStorage",
+            "Jest",
+            "React Test Renderer"
+          ]
+        },
+        "done": {
+          "title": "Co je hotové",
+          "items": [
+            "Domovská obrazovka s kartou pro nádrž Mšeno.",
+            "Zobrazení aktuální teploty vzduchu a vody.",
+            "Načítání dat z veřejného portálu Povodí Labe.",
+            "Parser HTML tabulky pro vyhledání řádku nádrže Mšeno.",
+            "Loading, error a retry stav při nedostupném zdroji dat.",
+            "Světlý, tmavý a automatický režim vzhledu.",
+            "Uložení volby vzhledu pomocí AsyncStorage."
+          ]
+        },
+        "dataFlow": {
+          "title": "Data flow",
+          "items": [
+            {
+              "title": "Zdroj dat",
+              "description": "Aplikace čte veřejnou stránku Povodí Labe a hledá tabulkový řádek pro nádrž Mšeno."
+            },
+            {
+              "title": "Parser",
+              "description": "Služba pomocí node-html-parser převede HTML na strukturu, normalizuje buňky a mapuje teplotu vzduchu a vody."
+            },
+            {
+              "title": "Načítání",
+              "description": "TanStack Query řeší stav načítání, cache na pět minut, opakované načtení po reconnectu a návratu aplikace do popředí."
+            }
+          ]
+        },
+        "theme": {
+          "title": "Theme systém",
+          "items": [
+            {
+              "title": "Režimy",
+              "description": "Uživatel může přepnout světlý, tmavý nebo automatický režim podle systému."
+            },
+            {
+              "title": "Persistované nastavení",
+              "description": "Volba vzhledu se ukládá do AsyncStorage, takže zůstane zachovaná i po restartu aplikace."
+            },
+            {
+              "title": "Themed komponenty",
+              "description": "Sdílené ThemedText a ThemedView komponenty čtou aktuální barvy a drží UI konzistentní napříč obrazovkami."
+            }
+          ]
+        },
+        "testing": {
+          "title": "Testy a kvalita",
+          "items": [
+            "Jest testy ověřují parser pro Mšeno, neúspěšnou HTTP odpověď, chybějící řádek, timeout i síťovou chybu.",
+            "Testy domovské obrazovky kontrolují loading stav, error retry a vykreslení karty s daty.",
+            "Projekt má skripty pro lint, typecheck, test coverage a CI kontrolu."
+          ]
+        },
+        "screenshots": {
+          "title": "Obrazovky",
+          "items": [
+            {
+              "src": "/images/mobileApp/dasboardLight.PNG",
+              "alt": "Světlý režim dashboardu Jablonec Sea"
+            },
+            {
+              "src": "/images/mobileApp/dashboardDark.PNG",
+              "alt": "Tmavý režim dashboardu Jablonec Sea"
+            },
+            {
+              "src": "/images/mobileApp/appearanceLight.PNG",
+              "alt": "Světlý režim obrazovky nastavení vzhledu"
+            },
+            {
+              "src": "/images/mobileApp/appearanceDark.PNG",
+              "alt": "Tmavý režim obrazovky nastavení vzhledu"
+            }
+          ]
+        },
+        "roadmap": {
+          "title": "Další plán",
+          "items": [
+            {
+              "title": "Publikace aplikace",
+              "description": "Připravit produkční build přes EAS a doplnit instalační nebo preview odkaz."
+            },
+            {
+              "title": "Více lokalit",
+              "description": "Rozšířit aplikaci o výběr dalších nádrží nebo oblíbených míst."
+            },
+            {
+              "title": "Historie hodnot",
+              "description": "Doplnit jednoduchý trend nebo historii posledních načtených teplot."
+            }
+          ]
+        }
       }
     },
     "skills": {
