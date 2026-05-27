@@ -36,7 +36,143 @@
     "projects": {
       "eyebrow": "Projects",
       "title": "Selected projects and case studies",
-      "description": "This section will grow into a collection of projects showing React, Next.js, TypeScript, API integrations, and interface design in practice."
+      "description": "This section will grow into a collection of projects showing React, Next.js, TypeScript, API integrations, and interface design in practice.",
+      "backToProjects": "Back to projects",
+      "reserve": {
+        "title": "Reserve App",
+        "pitch": "A full-stack app for future reservation management between trainers and clients. The current version presents authentication, a protected dashboard, API documentation, and a foundation for the reservation workflow.",
+        "previewCta": "Open case study",
+        "links": {
+          "items": [
+            {
+              "label": "Web",
+              "href": "",
+              "icon": "web"
+            },
+            {
+              "label": "API docs",
+              "href": "",
+              "icon": "docs"
+            },
+            {
+              "label": "GitHub",
+              "href": "",
+              "icon": "github"
+            }
+          ]
+        },
+        "summary": {
+          "items": [
+            {
+              "label": "Role",
+              "value": "UI design, frontend implementation, API integration, and documentation of key technical decisions."
+            },
+            {
+              "label": "Goal",
+              "value": "Build a solid foundation for a reservation app that can grow into time slots, bookings, roles, and administration features."
+            },
+            {
+              "label": "Focus",
+              "value": "Authentication, protected pages, forms, data validation, API contracts, E2E tests, and full-stack deployment."
+            }
+          ]
+        },
+        "stack": {
+          "title": "Stack",
+          "items": [
+            "React",
+            "Next.js",
+            "TypeScript",
+            "Tailwind CSS",
+            "NestJS",
+            "Prisma",
+            "PostgreSQL",
+            "Supabase",
+            "Playwright",
+            "Vercel",
+            "Render"
+          ]
+        },
+        "done": {
+          "title": "What is done",
+          "items": [
+            "Public landing page for introducing the app.",
+            "User registration and login through Next.js server actions and a NestJS API.",
+            "Protected dashboard available only after login.",
+            "User summary with data for the currently authenticated user.",
+            "Swagger documentation for the auth API and basic endpoints.",
+            "Playwright E2E test for login and dashboard rendering.",
+            "Web deployed to Vercel, API to Render, and database hosted on Supabase Postgres."
+          ]
+        },
+        "architecture": {
+          "title": "Architecture",
+          "items": [
+            {
+              "title": "Frontend",
+              "description": "The Next.js app includes a landing page, registration and login forms, a protected dashboard, and a placeholder for the future reservations overview."
+            },
+            {
+              "title": "API",
+              "description": "The NestJS API handles registration, login, current user data, JWT authentication, input validation, and Swagger documentation. The reservation endpoint is still a prototype."
+            },
+            {
+              "title": "Data",
+              "description": "The Prisma schema has the User model and roles in place. TrainingSession, Reservation, and notification models are planned as the next step."
+            }
+          ]
+        },
+        "auth": {
+          "title": "Auth flow",
+          "items": [
+            {
+              "title": "Sign up and login",
+              "description": "The user completes a form, data is validated, and the app works with an authentication token after a successful login."
+            },
+            {
+              "title": "Protected routes",
+              "description": "Private areas check authentication state and prevent users from entering reservation or admin flows without a valid session."
+            },
+            {
+              "title": "Logout",
+              "description": "Logout clears the client state and returns the user to the public part of the app without stale permissions."
+            }
+          ]
+        },
+        "testing": {
+          "title": "Testing and deploy",
+          "items": [
+            "Playwright verifies the main completed flow: login, redirecting to the dashboard, and rendering the authenticated user data.",
+            "Swagger documentation is used to verify auth endpoints and request/response contracts.",
+            "Deployment is split between Vercel, Render, and Supabase Postgres."
+          ]
+        },
+        "learnings": {
+          "title": "What I learned",
+          "items": [
+            "How to keep the contract between frontend and API consistent so backend changes do not break the user flow.",
+            "How to design an auth flow that feels understandable in the UI and remains safe at the route and data level.",
+            "How to present a technical project as a product story: problem, solution, implementation state, and next steps."
+          ]
+        },
+        "roadmap": {
+          "title": "Next steps",
+          "items": [
+            {
+              "title": "Reservation workflow",
+              "description": "Add time slot selection, booking creation, and persistence of reservations in the database."
+            },
+            {
+              "title": "Reservation data model",
+              "description": "Extend the Prisma schema with TrainingSession, Reservation, and user relationships."
+            },
+            {
+              "title": "Admin/trainer dashboard",
+              "description": "Add availability management, reservation overview, and filtering by date."
+            }
+          ]
+        }
+      }
     },
     "skills": {
       "eyebrow": "Skills",
