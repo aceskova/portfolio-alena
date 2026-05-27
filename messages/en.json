@@ -321,7 +321,39 @@
     "contact": {
       "eyebrow": "Contact",
       "title": "Let's connect",
-      "description": "If you are looking for a frontend developer for a web application, portfolio project, or longer-term collaboration, I would be happy to hear what you are building."
+      "description": "If you are looking for a frontend developer for a web application, portfolio project, or longer-term collaboration, I would be happy to hear what you are building.",
+      "primary": {
+        "title": "Send me an email",
+        "description": "Send me a short note about what you are building, what role you are hiring for, or where frontend help would be useful.",
+        "cta": "Open email"
+      },
+      "links": {
+        "linkedin": {
+          "label": "LinkedIn",
+          "description": "Profile, work context, and direct messages."
+        },
+        "github": {
+          "label": "GitHub",
+          "description": "Project examples, code, and learning in practice."
+        },
+        "cv": {
+          "label": "CV",
+          "description": "A concise overview of experience and technologies."
+        }
+      },
+      "focus": {
+        "title": "What I can help with",
+        "items": [
+          "Frontend development with React, Next.js, and TypeScript.",
+          "Implementing clear UI from designs or product requirements.",
+          "Connecting to REST APIs, working with data and forms.",
+          "Testing and debugging user-facing flows."
+        ]
+      },
+      "location": {
+        "title": "Location",
+        "description": "Jablonec nad Nisou / remote collaboration."
+      }
     }
   }
 }
