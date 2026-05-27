@@ -172,6 +172,145 @@
             }
           ]
         }
+      },
+      "jablonecSea": {
+        "title": "Jablonec Sea",
+        "pitch": "A mobile Expo app for quickly checking the current water and air temperature at the Mšeno reservoir in Jablonec nad Nisou. The project shows React Native UI work, an external data source, HTML parsing, loading states, and light/dark appearance modes.",
+        "links": {
+          "items": [
+            {
+              "label": "App",
+              "href": "",
+              "icon": "web"
+            },
+            {
+              "label": "GitHub",
+              "href": "",
+              "icon": "github"
+            }
+          ]
+        },
+        "summary": {
+          "items": [
+            {
+              "label": "Role",
+              "value": "Mobile app design and implementation, data service, theme system, and tests."
+            },
+            {
+              "label": "Goal",
+              "value": "Create a simple mobile overview of current reservoir conditions without making users search for the data on a website."
+            },
+            {
+              "label": "Focus",
+              "value": "React Native UI, Expo Router, TanStack Query, parsing a public HTML source, error states, and testing."
+            }
+          ]
+        },
+        "stack": {
+          "title": "Stack",
+          "items": [
+            "Expo",
+            "React Native",
+            "Expo Router",
+            "TypeScript",
+            "TanStack Query",
+            "AsyncStorage",
+            "Jest",
+            "React Test Renderer"
+          ]
+        },
+        "done": {
+          "title": "What is done",
+          "items": [
+            "Home screen with a card for the Mšeno reservoir.",
+            "Display of the current air and water temperature.",
+            "Data loading from the public Povodí Labe portal.",
+            "HTML table parser that finds the Mšeno reservoir row.",
+            "Loading, error, and retry states when the data source is unavailable.",
+            "Light, dark, and automatic appearance modes.",
+            "Persisted appearance preference using AsyncStorage."
+          ]
+        },
+        "dataFlow": {
+          "title": "Data flow",
+          "items": [
+            {
+              "title": "Data source",
+              "description": "The app reads a public Povodí Labe page and searches the table row for the Mšeno reservoir."
+            },
+            {
+              "title": "Parser",
+              "description": "The service uses node-html-parser to turn HTML into a structure, normalize table cells, and map air and water temperature."
+            },
+            {
+              "title": "Fetching",
+              "description": "TanStack Query handles loading state, five-minute cache, refetching on reconnect, and refetching when the app returns to the foreground."
+            }
+          ]
+        },
+        "theme": {
+          "title": "Theme system",
+          "items": [
+            {
+              "title": "Modes",
+              "description": "The user can switch between light, dark, and automatic mode based on the system appearance."
+            },
+            {
+              "title": "Persisted setting",
+              "description": "The selected appearance mode is stored in AsyncStorage, so it survives app restarts."
+            },
+            {
+              "title": "Themed components",
+              "description": "Shared ThemedText and ThemedView components read current colors and keep the UI consistent across screens."
+            }
+          ]
+        },
+        "testing": {
+          "title": "Testing and quality",
+          "items": [
+            "Jest tests verify the Mšeno parser, failed HTTP responses, missing rows, timeout handling, and network errors.",
+            "Home screen tests cover loading state, error retry, and rendering the reservoir card with data.",
+            "The project includes scripts for linting, type checking, test coverage, and CI checks."
+          ]
+        },
+        "screenshots": {
+          "title": "Screens",
+          "items": [
+            {
+              "src": "/images/mobileApp/dasboardLight.PNG",
+              "alt": "Jablonec Sea dashboard in light mode"
+            },
+            {
+              "src": "/images/mobileApp/dashboardDark.PNG",
+              "alt": "Jablonec Sea dashboard in dark mode"
+            },
+            {
+              "src": "/images/mobileApp/appearanceLight.PNG",
+              "alt": "Appearance settings screen in light mode"
+            },
+            {
+              "src": "/images/mobileApp/appearanceDark.PNG",
+              "alt": "Appearance settings screen in dark mode"
+            }
+          ]
+        },
+        "roadmap": {
+          "title": "Next steps",
+          "items": [
+            {
+              "title": "App publishing",
+              "description": "Prepare a production build with EAS and add an installation or preview link."
+            },
+            {
+              "title": "More locations",
+              "description": "Extend the app with a selection of more reservoirs or favorite places."
+            },
+            {
+              "title": "Value history",
+              "description": "Add a simple trend or history of recently loaded temperatures."
+            }
+          ]
+        }
       }
     },
     "skills": {
