@@ -62,6 +62,7 @@ export default function ThemeSwitcher({
       onClick={switchTheme}
       aria-label={labels[targetTheme]}
       className="rounded-full"
+      suppressHydrationWarning
     >
       <Image
         src={themeIcons[targetTheme]}

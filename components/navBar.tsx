@@ -111,9 +111,9 @@ function DesktopNav({
         <Link
           key={item.href}
           href={item.href}
-          aria-current={activePathname === item.href ? 'page' : undefined}
+          aria-current={isActiveNavigationItem(activePathname, item.href) ? 'page' : undefined}
           className={`rounded-full px-4 py-2 text-lg transition ${
-            activePathname === item.href
+            isActiveNavigationItem(activePathname, item.href)
               ? 'bg-sky-500/10 text-sky-600 dark:text-sky-400'
               : 'hover:bg-sky-500/10 hover:text-sky-500 text-foreground'
           }`}
@@ -177,9 +177,11 @@ function MobileNav({
               <SheetClose asChild key={item.href}>
                 <Link
                   href={item.href}
-                  aria-current={activePathname === item.href ? 'page' : undefined}
+                  aria-current={
+                    isActiveNavigationItem(activePathname, item.href) ? 'page' : undefined
+                  }
                   className={`rounded-xl px-4 py-3 text-base transition ${
-                    activePathname === item.href
+                    isActiveNavigationItem(activePathname, item.href)
                       ? 'bg-sky-500/10 text-sky-600 dark:text-sky-400'
                       : 'hover:bg-sky-500/10 hover:text-sky-500 text-foreground'
                   }`}
@@ -193,4 +195,8 @@ function MobileNav({
       </Sheet>
     </div>
   );
+}
+
+function isActiveNavigationItem(activePathname: string, href: NavigationLink['href']) {
+  return activePathname === href || activePathname.startsWith(`${href}/`);
 }

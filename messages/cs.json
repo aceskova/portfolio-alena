@@ -36,7 +36,143 @@
     "projects": {
       "eyebrow": "Projekty",
       "title": "Vybrané projekty a případové studie",
-      "description": "Tady postupně představím projekty, na kterých ukazuji práci s Reactem, Next.js, typováním, API integracemi a návrhem rozhraní."
+      "description": "Tady postupně představím projekty, na kterých ukazuji práci s Reactem, Next.js, TypeScript, API integracemi a návrhem rozhraní.",
+      "backToProjects": "Zpět na projekty",
+      "reserve": {
+        "title": "Reserve App",
+        "pitch": "Full-stack aplikace pro budoucí správu rezervací mezi trenéry a klienty. Aktuálně ukazuje autentizaci, chráněný dashboard, API dokumentaci a připravený základ pro rezervační workflow.",
+        "previewCta": "Otevřít case study",
+        "links": {
+          "items": [
+            {
+              "label": "Web",
+              "href": "",
+              "icon": "web"
+            },
+            {
+              "label": "API docs",
+              "href": "",
+              "icon": "docs"
+            },
+            {
+              "label": "GitHub",
+              "href": "",
+              "icon": "github"
+            }
+          ]
+        },
+        "summary": {
+          "items": [
+            {
+              "label": "Role",
+              "value": "Návrh UI, frontend implementace, napojení na API a dokumentace klíčových rozhodnutí."
+            },
+            {
+              "label": "Cíl",
+              "value": "Postavit pevný základ rezervační aplikace, který se dá dál rozšiřovat o termíny, rezervace, role a administrační funkce."
+            },
+            {
+              "label": "Zaměření",
+              "value": "Autentizace, chráněné stránky, formuláře, validace dat, API kontrakty, E2E testy a deployment full-stack aplikace."
+            }
+          ]
+        },
+        "stack": {
+          "title": "Stack",
+          "items": [
+            "React",
+            "Next.js",
+            "TypeScript",
+            "Tailwind CSS",
+            "NestJS",
+            "Prisma",
+            "PostgreSQL",
+            "Supabase",
+            "Playwright",
+            "Vercel",
+            "Render"
+          ]
+        },
+        "done": {
+          "title": "Co je hotové",
+          "items": [
+            "Veřejná landing stránka pro představení aplikace.",
+            "Registrace a přihlášení uživatele přes Next.js server actions a NestJS API.",
+            "Chráněný dashboard dostupný pouze po přihlášení.",
+            "User summary s daty aktuálně přihlášeného uživatele.",
+            "Swagger dokumentace pro auth API a základní endpointy.",
+            "Playwright E2E test pro login a zobrazení dashboardu.",
+            "Deployment webu na Vercel, API na Render a databáze přes Supabase Postgres."
+          ]
+        },
+        "architecture": {
+          "title": "Architektura",
+          "items": [
+            {
+              "title": "Frontend",
+              "description": "Next.js aplikace obsahuje landing page, registrační a přihlašovací formulář, chráněný dashboard a placeholder pro budoucí přehled rezervací."
+            },
+            {
+              "title": "API",
+              "description": "NestJS API řeší registraci, login, aktuálního uživatele, JWT autentizaci, validaci vstupů a Swagger dokumentaci. Reservation endpoint je zatím prototypový."
+            },
+            {
+              "title": "Data",
+              "description": "Prisma schema má hotový User model a role. Modely pro TrainingSession, Reservation a notifikace jsou zatím navržené jako další krok."
+            }
+          ]
+        },
+        "auth": {
+          "title": "Auth flow",
+          "items": [
+            {
+              "title": "Registrace a přihlášení",
+              "description": "Uživatel projde formulářem, data se validují a aplikace po úspěšném přihlášení pracuje s autentizačním tokenem."
+            },
+            {
+              "title": "Chráněné routy",
+              "description": "Soukromé části aplikace kontrolují stav přihlášení a nepouští uživatele do rezervací nebo administrace bez platné session."
+            },
+            {
+              "title": "Odhlášení",
+              "description": "Odhlášení vyčistí klientský stav a vrátí uživatele do veřejné části aplikace bez zbytkových oprávnění."
+            }
+          ]
+        },
+        "testing": {
+          "title": "Testy a deploy",
+          "items": [
+            "Playwright ověřuje hlavní hotový tok: login, přesměrování do dashboardu a zobrazení dat přihlášeného uživatele.",
+            "Swagger dokumentace slouží pro ověření auth endpointů a request/response kontraktů.",
+            "Deployment je rozdělený mezi Vercel, Render a Supabase Postgres."
+          ]
+        },
+        "learnings": {
+          "title": "Co jsem se naučila",
+          "items": [
+            "Jak držet konzistentní kontrakt mezi frontendem a API, aby změny v backendu nerozbily uživatelský tok.",
+            "Jak navrhovat auth flow tak, aby bylo srozumitelné v UI a zároveň bezpečné na úrovni rout a dat.",
+            "Jak prezentovat technický projekt produktově: problém, řešení, stav implementace a další plán."
+          ]
+        },
+        "roadmap": {
+          "title": "Další plán",
+          "items": [
+            {
+              "title": "Rezervační workflow",
+              "description": "Doplnit výběr termínu, vytvoření rezervace a ukládání rezervací do databáze."
+            },
+            {
+              "title": "Datový model rezervací",
+              "description": "Rozšířit Prisma schema o TrainingSession, Reservation a vazby na uživatele."
+            },
+            {
+              "title": "Admin/trainer dashboard",
+              "description": "Přidat správu dostupnosti, přehled rezervací a filtrování podle termínu."
+            }
+          ]
+        }
+      }
     },
     "skills": {
       "eyebrow": "Dovednosti",
