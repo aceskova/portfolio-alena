@@ -321,7 +321,39 @@
     "contact": {
       "eyebrow": "Kontakt",
       "title": "Pojďme se propojit",
-      "description": "Pokud hledáte frontend vývojářku pro webovou aplikaci, portfolio projekt nebo dlouhodobou spolupráci, ráda si poslechnu, co stavíte."
+      "description": "Pokud hledáte frontend vývojářku pro webovou aplikaci, portfolio projekt nebo dlouhodobou spolupráci, ráda si poslechnu, co stavíte.",
+      "primary": {
+        "title": "Napište mi e-mail",
+        "description": "Pošlete mi krátce, co stavíte, jakou roli řešíte nebo kde by se vám hodila pomoc s frontendovou částí.",
+        "cta": "Otevřít e-mail"
+      },
+      "links": {
+        "linkedin": {
+          "label": "LinkedIn",
+          "description": "Profil, pracovní kontext a přímá zpráva."
+        },
+        "github": {
+          "label": "GitHub",
+          "description": "Ukázky projektů, kód a postupné učení v praxi."
+        },
+        "cv": {
+          "label": "CV",
+          "description": "Stručný přehled zkušeností a technologií ke stažení."
+        }
+      },
+      "focus": {
+        "title": "Na co se hodím",
+        "items": [
+          "Frontend vývoj v Reactu, Next.js a TypeScriptu.",
+          "Implementace přehledného UI podle návrhu nebo zadání.",
+          "Napojení na REST API, práce s daty a formuláři.",
+          "Testování a ladění uživatelských toků."
+        ]
+      },
+      "location": {
+        "title": "Lokalita",
+        "description": "Jablonec nad Nisou / remote spolupráce."
+      }
     }
   }
 }
