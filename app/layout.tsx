@@ -7,6 +7,7 @@ import { ReactNode } from 'react';
 import { getTranslations } from 'next-intl/server';
 import Navbar from '@/components/navBar';
 import { defaultTheme, themeCookieName } from '@/lib/theme';
+import { Analytics } from '@vercel/analytics/next';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -62,6 +63,8 @@ try {
           <Navbar initialTheme={defaultTheme} />
           {children}
         </NextIntlClientProvider>
+
+         <Analytics />
       </body>
     </html>
   );
