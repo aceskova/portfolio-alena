@@ -1,6 +1,6 @@
-import { ArrowRight, CalendarCheck2, Waves } from 'lucide-react';
+import { CalendarCheck2, Wrench, Waves, PanelsTopLeft } from 'lucide-react';
 import { getLocale, getTranslations } from 'next-intl/server';
-import Link from 'next/link';
+import PortfolioCard from '@/components/portfolioCard';
 
 const caseStudyCta = {
   cs: 'Otevřít case study',
@@ -26,66 +26,99 @@ export default async function Projects() {
   const cta = caseStudyCta[locale as keyof typeof caseStudyCta] ?? caseStudyCta.cs;
 
   return (
-    <main className="mx-auto flex w-full max-w-5xl flex-1 flex-col px-5 pb-20 pt-16 sm:px-8 sm:pb-28 sm:pt-20 lg:px-16">
-      <p className="mb-3 text-sm font-semibold uppercase tracking-wide text-sky-600 dark:text-sky-400">
+    <main className="mx-auto flex w-full max-w-5xl flex-1 flex-col px-5 pb-20 pt-16 sm:px-8 sm:pb-28 sm:pt-20">
+      <p className="mb-3 text-sm font-semibold uppercase tracking-wide text-brand-foreground">
         {t('eyebrow')}
       </p>
-      <h1 className="max-w-3xl text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
+      <h1 className="max-w-3xl text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
         {t('title')}
       </h1>
       <p className="mt-6 max-w-2xl text-lg leading-8 text-muted-foreground">{t('description')}</p>
 
       <section className="mt-12 grid gap-5">
-        {projects.map((project) => {
-          const stack = t.raw(`${project.key}.stack.items`) as string[];
-          const visibleStack = stack.slice(0, 5);
-          const hiddenStackCount = stack.length - visibleStack.length;
-          const Icon = project.icon;
-
-          return (
-            <Link
-              key={project.href}
-              href={project.href}
-              className="group grid gap-6 rounded-lg border border-border bg-card p-6 text-card-foreground transition hover:border-sky-500/50 hover:bg-muted/40 sm:grid-cols-[auto_1fr_auto] sm:items-start"
-            >
-              <span className="flex size-12 items-center justify-center rounded-full bg-sky-500/10 text-sky-600 dark:text-sky-400">
-                <Icon className="size-5" aria-hidden="true" />
-              </span>
-
-              <span>
-                <span className="block text-2xl font-bold tracking-tight">
-                  {t(`${project.key}.title`)}
-                </span>
-                <span className="mt-3 block max-w-2xl text-base leading-6 text-muted-foreground">
-                  {t(`${project.key}.pitch`)}
-                </span>
-                <span className="mt-5 flex flex-wrap gap-2">
-                  {visibleStack.map((item) => (
-                    <span
-                      key={item}
-                      className="rounded-full border border-border bg-background px-3 py-1 text-xs font-medium text-foreground"
-                    >
-                      {item}
-                    </span>
-                  ))}
-                  {hiddenStackCount > 0 && (
-                    <span className="rounded-full border border-border bg-muted px-3 py-1 text-xs font-medium text-muted-foreground">
-                      +{hiddenStackCount}
-                    </span>
-                  )}
-                </span>
-              </span>
-
-              <span className="inline-flex items-center gap-2 text-sm font-semibold text-sky-600 dark:text-sky-400">
-                {cta}
-                <ArrowRight
-                  className="size-4 transition group-hover:translate-x-0.5"
-                  aria-hidden="true"
-                />
-              </span>
-            </Link>
-          );
-        })}
+        <PortfolioCard
+          icon={Wrench}
+          label={t('currentWork.label')}
+          title={t('currentWork.title')}
+          description={t.raw('currentWork.description') as string[]}
+          technologies={[
+            'TypeScript',
+            'React Hook Form',
+            'TanStack Query',
+            'Zod',
+            'Fetch API',
+            'Nginx',
+            'Podman',
+            'Playwright',
+          ]}
+          note={t('currentWork.context')}
+        >
+          <div className="mt-6 grid gap-5">
+            <div>
+              <h3 className="text-base font-semibold">{t('currentWork.currentTitle')}</h3>
+              <p className="mt-2 max-w-2xl text-base leading-6 text-muted-foreground">
+                {(t.raw('currentWork.current') as string[]).map((sentence) => (
+                  <span key={sentence} className="block">
+                    {sentence}
+                  </span>
+                ))}
+              </p>
+            </div>
+            <div>
+              <h3 className="text-base font-semibold">{t('currentWork.nextTitle')}</h3>
+              <p className="mt-2 max-w-2xl text-base leading-6 text-muted-foreground">
+                {(t.raw('currentWork.next') as string[]).map((sentence) => (
+                  <span key={sentence} className="block">
+                    {sentence}
+                  </span>
+                ))}
+              </p>
+            </div>
+          </div>
+        </PortfolioCard>
+        <PortfolioCard
+          icon={PanelsTopLeft}
+          label={t('portfolio.label')}
+          title={t('portfolio.title')}
+          description={t('portfolio.description')}
+          technologies={[
+            'Next.js',
+            'React',
+            'TypeScript',
+            'Tailwind CSS',
+            'next-intl',
+            'Vercel Analytics',
+          ]}
+        >
+          <div className="mt-6 grid gap-5">
+            <div>
+              <h3 className="text-base font-semibold">{t('portfolio.learningTitle')}</h3>
+              <ul className="mt-2 max-w-2xl list-disc space-y-2 pl-5 text-base leading-6 text-muted-foreground">
+                {(t.raw('portfolio.learning') as string[]).map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-base font-semibold">{t('portfolio.purposeTitle')}</h3>
+              <p className="mt-2 max-w-2xl text-base leading-6 text-muted-foreground">
+                {t('portfolio.purpose')}
+              </p>
+            </div>
+          </div>
+        </PortfolioCard>
+        {projects.map((project) => (
+          <PortfolioCard
+            key={project.href}
+            icon={project.icon}
+            title={t(`${project.key}.title`)}
+            description={t(`${project.key}.pitch`)}
+            technologies={t.raw(`${project.key}.stack.items`) as string[]}
+            technologyLimit={5}
+            action={{ href: project.href, label: cta }}
+            actionPosition="side"
+          />
+        ))}
       </section>
     </main>
   );

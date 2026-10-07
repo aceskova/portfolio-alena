@@ -1,3 +1,4 @@
+import TechnologyBadges from '@/components/technologyBadges';
 import {
   ArrowLeft,
   CheckCircle2,
@@ -61,7 +62,7 @@ export default async function JablonecSeaProject() {
   const screenshots = t.raw('jablonecSea.screenshots.items') as ScreenshotItem[];
 
   return (
-    <main className="mx-auto flex w-full max-w-5xl flex-1 flex-col px-5 pb-20 pt-16 sm:px-8 sm:pb-28 sm:pt-20 lg:px-16">
+    <main className="mx-auto flex w-full max-w-5xl flex-1 flex-col px-5 pb-20 pt-16 sm:px-8 sm:pb-28 sm:pt-20">
       <Link
         href="/projects"
         className="mb-8 inline-flex items-center gap-2 text-sm font-semibold text-muted-foreground transition hover:text-foreground"
@@ -70,13 +71,13 @@ export default async function JablonecSeaProject() {
         {t('backToProjects')}
       </Link>
 
-      <p className="mb-3 text-sm font-semibold uppercase tracking-wide text-sky-600 dark:text-sky-400">
+      <p className="mb-3 text-sm font-semibold uppercase tracking-wide text-brand-foreground">
         {t('eyebrow')}
       </p>
 
       <section className="grid gap-10 lg:grid-cols-[1fr_0.95fr] lg:items-start">
         <div>
-          <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
+          <h1 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
             {t('jablonecSea.title')}
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-muted-foreground">
@@ -114,16 +115,11 @@ export default async function JablonecSeaProject() {
         <h2 className="text-sm font-semibold uppercase tracking-wide text-muted-foreground">
           {t('jablonecSea.stack.title')}
         </h2>
-        <div className="mt-4 flex flex-wrap gap-2">
-          {(t.raw('jablonecSea.stack.items') as string[]).map((item) => (
-            <span
-              key={item}
-              className="rounded-full border border-border bg-background px-3 py-1.5 text-sm text-foreground"
-            >
-              {item}
-            </span>
-          ))}
-        </div>
+        <TechnologyBadges
+          items={t.raw('jablonecSea.stack.items') as string[]}
+          size="md"
+          className="mt-4"
+        />
       </section>
 
       <div className="mt-14 grid gap-12">
@@ -131,7 +127,7 @@ export default async function JablonecSeaProject() {
           <ul className="grid gap-3 sm:grid-cols-2">
             {done.map((item) => (
               <li key={item} className="flex gap-3 text-sm leading-6 text-muted-foreground">
-                <CheckCircle2 className="mt-0.5 size-4 shrink-0 text-sky-600 dark:text-sky-400" />
+                <CheckCircle2 className="mt-0.5 size-4 shrink-0 text-brand-foreground" />
                 <span>{item}</span>
               </li>
             ))}
@@ -224,7 +220,7 @@ function CaseSection({
   return (
     <section>
       <div className="mb-5 flex items-center gap-3">
-        <span className="flex size-9 items-center justify-center rounded-full bg-sky-500/10 text-sky-600 dark:text-sky-400">
+        <span className="flex size-9 items-center justify-center rounded-full bg-sky-500/10 text-brand-foreground">
           <Icon className="size-4" aria-hidden="true" />
         </span>
         <h2 className="text-2xl font-bold tracking-tight text-foreground">{title}</h2>

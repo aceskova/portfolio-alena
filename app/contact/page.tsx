@@ -48,12 +48,12 @@ export default async function Contact() {
   ] satisfies ContactLink[];
 
   return (
-    <main className="mx-auto grid w-full max-w-5xl flex-1 gap-12 px-5 pb-20 pt-16 sm:px-8 sm:pb-28 sm:pt-20 lg:grid-cols-[1fr_0.85fr] lg:px-16">
+    <main className="mx-auto grid w-full max-w-5xl flex-1 gap-12 px-5 pb-20 pt-16 sm:px-8 sm:pb-28 sm:pt-20 lg:grid-cols-[1fr_0.85fr]">
       <section>
-        <p className="mb-3 text-sm font-semibold uppercase tracking-wide text-sky-600 dark:text-sky-400">
+        <p className="mb-3 text-sm font-semibold uppercase tracking-wide text-brand-foreground">
           {t('eyebrow')}
         </p>
-        <h1 className="max-w-3xl text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
+        <h1 className="max-w-3xl text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
           {t('title')}
         </h1>
         <p className="mt-6 max-w-2xl text-lg leading-8 text-muted-foreground">{t('description')}</p>
@@ -76,7 +76,7 @@ export default async function Contact() {
           href={`mailto:${email}`}
           className="group block rounded-lg border border-border bg-card p-6 text-card-foreground transition hover:border-sky-500/50 hover:bg-muted/40"
         >
-          <span className="flex size-11 items-center justify-center rounded-full bg-sky-500/10 text-sky-600 dark:text-sky-400">
+          <span className="flex size-11 items-center justify-center rounded-full bg-sky-500/10 text-brand-foreground">
             <Mail className="size-5" aria-hidden="true" />
           </span>
           <span className="mt-5 block text-2xl font-bold tracking-tight">{t('primary.title')}</span>
@@ -84,7 +84,7 @@ export default async function Contact() {
             {t('primary.description')}
           </span>
           <span className="mt-4 block font-semibold text-foreground">{email}</span>
-          <span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-sky-600 dark:text-sky-400">
+          <span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-brand-foreground">
             {t('primary.cta')}
             <ExternalLink className="size-4" aria-hidden="true" />
           </span>
@@ -97,7 +97,7 @@ export default async function Contact() {
         </div>
 
         <div className="flex items-start gap-3 rounded-lg border border-border bg-card p-5 text-card-foreground">
-          <MapPin className="mt-0.5 size-5 shrink-0 text-sky-600 dark:text-sky-400" />
+          <MapPin className="mt-0.5 size-5 shrink-0 text-brand-foreground" />
           <div>
             <p className="font-semibold">{t('location.title')}</p>
             <p className="mt-1 text-sm leading-6 text-muted-foreground">
@@ -122,7 +122,7 @@ function ContactAction({ link }: { link: ContactLink }) {
       download={isCv ? true : undefined}
       className="flex items-start gap-4 rounded-lg border border-border bg-card p-5 text-card-foreground transition hover:border-sky-500/50 hover:bg-muted/40"
     >
-      <span className="flex size-10 shrink-0 items-center justify-center rounded-full bg-sky-500/10 text-sky-600 dark:text-sky-400">
+      <span className="flex size-10 shrink-0 items-center justify-center rounded-full bg-sky-500/10 text-brand-foreground">
         <Icon className="size-4" aria-hidden="true" />
       </span>
       <span className="min-w-0">

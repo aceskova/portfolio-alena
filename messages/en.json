@@ -4,14 +4,14 @@
     "description": "Portfolio of frontend developer Alena focused on React, Next.js, and modern web applications. Explore selected projects, skills, and experience."
   },
   "HomePage": {
-    "introPrefix": "Hi 👋 I'm",
-    "introName": "Alena Češková",
-    "headerSubtitle": "Discover my projects and skills",
-    "features": [
-      "Frontend developer focused on React and Next.js.",
-      "I build modern web applications with an emphasis on simplicity, performance, and great user experience.",
-      "Outside of coding, I spend time at the climbing gym — and just like in climbing, I enjoy finding solutions and pushing myself further."
-    ]
+    "identity": "Alena Češková · Frontend developer",
+    "headline": "I build interfaces.",
+    "headlineSecond": "I think about the whole application.",
+    "description": "I have experience in backend development and testing, and now focus on frontend development with React and Next.js. I’m interested in how the pieces work together and what the person using the application needs.",
+    "approach": "I keep learning, test my assumptions, and look for solutions I understand.",
+    "projectsCta": "Explore projects",
+    "cvCta": "Download CV",
+    "personal": "In my free time, I climb. I enjoy finding a route, trying different approaches, and returning to challenges I didn’t solve on the first attempt."
   },
   "Navigation": {
     "about": "About",
@@ -25,13 +25,44 @@
     "switchToDarkTheme": "Switch to dark theme",
     "menu": "Menu",
     "menuDescription": "Main site navigation",
-    "openMenu": "Open menu"
+    "openMenu": "Open menu",
+    "learning": "What I’m trying"
   },
   "Pages": {
     "about": {
-      "eyebrow": "About",
-      "title": "Frontend developer with a focus on React and Next.js",
-      "description": "I build modern web applications with clear interfaces, solid performance, and maintainable components. I enjoy combining technical precision with a thoughtful user experience."
+      "eyebrow": "About me",
+      "title": "I’m curious about how things work. And how to make them better.",
+      "description": "I’m Alena, a frontend developer with experience in backend development and testing. Today I focus on React, Next.js, and TypeScript. I enjoy building interfaces and understanding what happens behind them.",
+      "journey": {
+        "title": "From backend and testing to frontend",
+        "description": "My experience in backend development and testing shapes how I think about applications. Beyond appearance, I’m interested in data, error handling, and how the pieces connect. Frontend development lets me bring that experience to what people see and use on screen."
+      },
+      "approach": {
+        "title": "How I work",
+        "items": [
+          {
+            "title": "Understand first.",
+            "description": "I clarify what a solution should achieve and how it fits into the rest of the application."
+          },
+          {
+            "title": "Keep checking.",
+            "description": "I test my assumptions and explore situations where things don’t go as planned."
+          },
+          {
+            "title": "Find another route.",
+            "description": "When the first approach doesn’t work, I try to understand why and take a different one."
+          }
+        ]
+      },
+      "learning": {
+        "title": "What I’m learning",
+        "description": "I develop my skills through my own projects and tutorials. I try new approaches in smaller applications, where I can explore how the different pieces work together.",
+        "cta": "Explore what I’m trying"
+      },
+      "climbing": {
+        "title": "Away from code, I find routes on the climbing wall",
+        "description": "In my free time, I climb. I enjoy focusing on a route, trying different approaches, and returning to sections I couldn’t complete on the first attempt. For me, progress often comes from a small change in approach."
+      }
     },
     "projects": {
       "eyebrow": "Projects",
@@ -83,6 +114,7 @@
             "React",
             "Next.js",
             "TypeScript",
+            "Zod",
             "Tailwind CSS",
             "NestJS",
             "Prisma",
@@ -311,12 +343,77 @@
             }
           ]
         }
+      },
+      "currentWork": {
+        "label": "Currently working on",
+        "title": "Modernizing an installation wizard",
+        "description": [
+          "I’m gradually migrating an installation wizard in an existing application from JavaScript to TypeScript.",
+          "I’m updating its forms, input validation, and API communication."
+        ],
+        "currentTitle": "What I’m working on",
+        "current": [
+          "Moving to React Hook Form with Zod validation, integrating TanStack Query, and replacing Axios with the Fetch API.",
+          "The aim is to separate form state from server data and make error handling clearer."
+        ],
+        "nextTitle": "What I’m preparing next",
+        "next": [
+          "I plan to generate an API client from the Swagger/OpenAPI specification.",
+          "I will standardize linting across the project.",
+          "I will write Playwright E2E tests for the installation wizard."
+        ],
+        "context": "Technical environment: a Java backend and a PostgreSQL database."
+      },
+      "portfolio": {
+        "label": "Personal project · Continuously evolving",
+        "title": "My developer portfolio",
+        "description": "The website you’re browsing brings together my projects, experience, and ongoing learning. I keep refining it to make it clear for both recruiters and developers.",
+        "learningTitle": "What I practised and learned",
+        "learning": [
+          "Working with the Next.js App Router, TypeScript, and Czech–English translations using next-intl.",
+          "Designing shared components for cards, technology badges, and tutorial details.",
+          "Creating consistent responsive layouts, light and dark themes, and colour tokens.",
+          "Improving readability, contrast, and accessible link names, and integrating Vercel Analytics."
+        ],
+        "purposeTitle": "Why a portfolio matters to me",
+        "purpose": "My CV summarizes my experience; my portfolio adds concrete examples. It gives me a place to show what I build, why I choose particular solutions, and what I’m learning next. It helps me explain my thinking and my contribution to projects, beyond a list of technologies."
       }
     },
     "skills": {
       "eyebrow": "Skills",
-      "title": "Technologies I use to build web applications",
-      "description": "I focus on the frontend ecosystem around React, Next.js, TypeScript, and Tailwind CSS, with practical experience in testing, API work, and development tooling."
+      "title": "What I use to build applications",
+      "description": "I focus on frontend development with React and Next.js. My experience in backend development and testing helps me think about the application as a whole.",
+      "areas": {
+        "frontend": {
+          "title": "Frontend and interfaces",
+          "description": "I build components, responsive pages, and forms. I work with application state, navigation, and displaying data."
+        },
+        "backend": {
+          "title": "Backend and data",
+          "description": "I connect interfaces to APIs and databases. In my projects, I work with authentication, input validation, and protected pages."
+        },
+        "testing": {
+          "title": "Testing and verification",
+          "description": "I check user flows, forms, and error states. In Reserve App, I practised E2E testing for sign-in and navigation to the dashboard.",
+          "tags": ["Playwright", "Input validation", "API testing"]
+        },
+        "workflow": {
+          "title": "Project workflow",
+          "description": "I use Git and GitHub, work with API documentation, and deploy applications. I’m interested in how the frontend, server, and database work together after deployment, too."
+        }
+      },
+      "links": {
+        "portfolio": "Portfolio",
+        "habitTracker": "Habit Tracker",
+        "reserve": "Reserve App",
+        "github": "GitHub",
+        "projects": "Projects"
+      },
+      "learning": {
+        "title": "What I’m exploring next",
+        "description": "Through tutorials, I’m trying Server Actions, caching in Next.js, Drizzle ORM, and authentication with Clerk. I document my experience alongside each application.",
+        "cta": "What I’m trying"
+      }
     },
     "contact": {
       "eyebrow": "Contact",
@@ -353,6 +450,111 @@
       "location": {
         "title": "Location",
         "description": "Jablonec nad Nisou / remote collaboration."
+      }
+    },
+    "learning": {
+      "eyebrow": "What I’m trying",
+      "title": "Learning by doing",
+      "description": "I learn through hands-on practice. Here I share selected tutorials, videos, and small experiments — and what I tried along the way.",
+      "habitTracker": {
+        "label": "YouTube tutorial · Tried in practice",
+        "title": "Habit Tracker",
+        "description": "Following a tutorial, I built a habit tracking app with a weekly overview. Users can add habits, mark completed days, and browse previous weeks. Data stays saved in the browser after a page refresh.",
+        "learningTitle": "What I tried",
+        "learning": "Sharing state with React Context, building a custom localStorage hook, and working with dates using date-fns. I also practised typing components and calculating daily progress.",
+        "cta": "What I tried",
+        "back": "Back to overview",
+        "intro": "Following a YouTube tutorial, I built a daily habit tracker with React and TypeScript. This smaller project helped me practise shared state, custom hooks, and working with dates. Records are stored in the browser using localStorage.",
+        "featuresTitle": "What the app includes",
+        "features": [
+          "Adding and deleting habits, with an empty-name check.",
+          "Marking and unmarking completion for individual days.",
+          "A Monday-to-Sunday overview and navigation through previous weeks.",
+          "A count of habits completed today and a streak calculated backwards from today.",
+          "Data persistence after refreshing the page in the same browser."
+        ],
+        "learningsTitle": "What I practised and learned about",
+        "learnings": [
+          {
+            "title": "Shared state with React Context",
+            "description": "HabitProvider manages habits and their operations. The form, list, and header access shared state through the useHabits hook."
+          },
+          {
+            "title": "A custom localStorage hook",
+            "description": "The generic useLocalStorage hook loads stored data when initializing state and saves changes through useEffect. It falls back to the initial value when loading fails."
+          },
+          {
+            "title": "Dates stored as JSON",
+            "description": "A Date object becomes a string when saved. I practised converting it back using a JSON.parse reviver and parseISO from date-fns."
+          },
+          {
+            "title": "Weeks and calendar days",
+            "description": "I used date-fns for weekly intervals, week navigation, and calendar-day comparisons. The overview uses Czech day and month names."
+          },
+          {
+            "title": "State updates and derived values",
+            "description": "Adding, deleting, and toggling completion create new arrays and objects using map, filter, and spread syntax. Daily progress and streaks are calculated from stored records."
+          },
+          {
+            "title": "Typed components",
+            "description": "I practised typing habits, context, and component props. A shared button supports visual variants and standard HTML button properties."
+          }
+        ],
+        "nextTitle": "What I would improve next",
+        "next": [
+          "Add habit renaming and use one consistent interface language.",
+          "Handle localStorage write failures and enable data export.",
+          "Adjust streak calculation to include a streak ending yesterday before today’s habit is completed."
+        ]
+      },
+      "ibuiltthis": {
+        "title": "I Built This — project directory",
+        "label": "YouTube tutorial · Tried in practice",
+        "pitch": "A platform for sharing and discovering projects with community voting. I built it following a Next.js 16 tutorial and practised connecting the interface, authentication, server actions, and a database.",
+        "cta": "What I tried",
+        "back": "Back to overview",
+        "intro": "Through a YouTube tutorial project, I practised the journey from a form through input validation to storing and displaying data. It gave me a chance to explore the frontend and server side within one Next.js application.",
+        "featuresTitle": "What the app includes",
+        "features": [
+          "A project directory with search and sorting.",
+          "Project detail pages with slug-based URLs.",
+          "A project submission form with input validation.",
+          "Clerk sign-in and organization integration.",
+          "Voting and admin approval or rejection of submissions."
+        ],
+        "learningsTitle": "What I practised and learned about",
+        "learnings": [
+          {
+            "title": "Server and client components",
+            "description": "Separating server-side data loading from browser interactions. Project details use a dynamic slug route and generateStaticParams."
+          },
+          {
+            "title": "From a form to the database",
+            "description": "Server Actions, Zod validation, and useActionState for submission status and feedback. Inputs are validated on the server before being saved."
+          },
+          {
+            "title": "Data modelling and PostgreSQL",
+            "description": "Defining a schema with Drizzle ORM, migrations, and a Neon connection. I worked with unique slugs, indexes, and reading, inserting, and updating records."
+          },
+          {
+            "title": "Authentication and roles",
+            "description": "Clerk integration, authentication checks for submissions and voting, and an admin role check on the admin page. I also tried working with organizations."
+          },
+          {
+            "title": "Caching and refreshing data",
+            "description": "The cacheComponents setting, the use cache directive, dynamic loading with connection(), and revalidatePath after data changes."
+          },
+          {
+            "title": "React 19 interactions",
+            "description": "Using useOptimistic and useTransition for voting, search state, and list sorting. I composed the interface from reusable components."
+          }
+        ],
+        "nextTitle": "What I would improve next",
+        "next": [
+          "Check admin permissions inside the approval and rejection actions as well.",
+          "Track individual users’ votes and add feedback when voting fails.",
+          "Verify that all relevant views refresh after voting and moderation."
+        ]
       }
     }
   }
