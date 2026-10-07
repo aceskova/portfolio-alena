@@ -3,7 +3,7 @@ import Image from 'next/image';
 export default function HeroImage() {
   return (
     <div className="flex w-full justify-center overflow-hidden px-4 py-4">
-      <div className="relative aspect-4/5 w-64 sm:w-80">
+      <div className="relative aspect-4/5 w-52 max-w-full sm:w-60">
         <svg
           aria-hidden="true"
           className="pointer-events-none absolute -inset-4 h-[calc(100%+2rem)] w-[calc(100%+2rem)] overflow-visible"
@@ -45,7 +45,7 @@ export default function HeroImage() {
             alt="Portrait of Alena"
             fill
             loading="eager"
-            sizes="(min-width: 768px) 20rem, 80vw"
+            sizes="(min-width: 640px) 240px, 208px"
             className="object-cover"
           />
           <div className="pointer-events-none absolute inset-0 rounded-[50%] shadow-[inset_0_0_30px_20px_var(--background)]" />

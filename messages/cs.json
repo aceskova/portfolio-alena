@@ -4,14 +4,14 @@
     "description": "Portfolio frontend vývojářky Aleny zaměřené na React, Next.js a moderní webové aplikace. Prohlédněte si vybrané projekty, dovednosti a zkušenosti."
   },
   "HomePage": {
-    "introPrefix": "Zdravím 👋 jsem",
-    "introName": "Alena Češková",
-    "headerSubtitle": "Objevte mé projekty a dovednosti",
-    "features": [
-      "Frontend developer zaměřený na React a Next.js.",
-      "Stavím moderní webové aplikace s důrazem na jednoduchost, výkon a dobrý uživatelský zážitek.",
-      "Mimo kód trávím čas na lezecké stěně — a stejně jako při lezení mě baví hledat řešení a posouvat se dál."
-    ]
+    "identity": "Alena Češková · Frontend vývojářka",
+    "headline": "Tvořím rozhraní.",
+    "headlineSecond": "Přemýšlím o celé aplikaci.",
+    "description": "Mám zkušenosti s backendem a testováním, dnes se zaměřuji na frontend v Reactu a Next.js. Zajímá mě, jak spolu jednotlivé části fungují a co potřebuje člověk, který aplikaci používá.",
+    "approach": "Učím se průběžně, ověřuji svoje předpoklady a hledám řešení, kterým rozumím.",
+    "projectsCta": "Prohlédnout projekty",
+    "cvCta": "Stáhnout CV",
+    "personal": "Ve volnu lezu. Baví mě hledat cestu, zkoušet jiné postupy a vracet se k tomu, co napoprvé nevyšlo."
   },
   "Navigation": {
     "about": "O mně",
@@ -25,13 +25,44 @@
     "switchToDarkTheme": "Přepnout na tmavý režim",
     "menu": "Menu",
     "menuDescription": "Hlavní navigace webu",
-    "openMenu": "Otevřít menu"
+    "openMenu": "Otevřít menu",
+    "learning": "Co si zkouším"
   },
   "Pages": {
     "about": {
       "eyebrow": "O mně",
-      "title": "Frontend vývojářka se zázemím v Reactu a Next.js",
-      "description": "Tvořím moderní webové aplikace s důrazem na přehledné rozhraní, výkon a udržitelné komponenty. Baví mě propojovat technickou přesnost s dobrým uživatelským zážitkem."
+      "title": "Zajímá mě, jak věci fungují. A jak je dělat lépe.",
+      "description": "Jsem Alena, frontend vývojářka se zkušenostmi s backendem a testováním. Dnes se soustředím na React, Next.js a TypeScript. Baví mě tvořit rozhraní a rozumět tomu, co se děje za ním.",
+      "journey": {
+        "title": "Od backendu a testování k frontendu",
+        "description": "Zkušenosti s backendem a testováním ovlivňují, jak nad aplikacemi přemýšlím. Vedle vzhledu mě zajímá práce s daty, chování při chybách a návaznost jednotlivých částí. Na frontendu tyto zkušenosti propojuji s tím, co vidí a používá člověk na druhé straně obrazovky."
+      },
+      "approach": {
+        "title": "Jak pracuji",
+        "items": [
+          {
+            "title": "Nejdřív porozumět.",
+            "description": "Ujasňuji si, co má řešení přinést a jak zapadá do zbytku aplikace."
+          },
+          {
+            "title": "Ověřovat průběžně.",
+            "description": "Kontroluji svoje předpoklady a zkouším i situace, kdy něco nejde podle plánu."
+          },
+          {
+            "title": "Hledat další cestu.",
+            "description": "Když první postup nefunguje, snažím se zjistit proč a zkusit jiný."
+          }
+        ]
+      },
+      "learning": {
+        "title": "Co se právě učím",
+        "description": "Rozvíjím se na vlastních projektech i při práci podle tutoriálů. Nové postupy si zkouším v menších aplikacích, kde můžu sledovat, jak jednotlivé části fungují dohromady.",
+        "cta": "Prohlédnout, co si zkouším"
+      },
+      "climbing": {
+        "title": "Mimo kód hledám cesty na stěně",
+        "description": "Ve volnu lezu. Baví mě soustředit se na konkrétní cestu, zkoušet různé postupy a vracet se k místům, která se napoprvé nepodařila. Pokrok pro mě často znamená malou změnu přístupu."
+      }
     },
     "projects": {
       "eyebrow": "Projekty",
@@ -83,6 +114,7 @@
             "React",
             "Next.js",
             "TypeScript",
+            "Zod",
             "Tailwind CSS",
             "NestJS",
             "Prisma",
@@ -311,12 +343,77 @@
             }
           ]
         }
+      },
+      "currentWork": {
+        "label": "Právě pracuji",
+        "title": "Modernizace instalačního průvodce",
+        "description": [
+          "V existující aplikaci postupně převádím instalačního průvodce z JavaScriptu do TypeScriptu.",
+          "Upravuji formuláře, validaci vstupů a komunikaci s API."
+        ],
+        "currentTitle": "Na čem pracuji",
+        "current": [
+          "Přecházím na React Hook Form a validaci pomocí Zodu, zapojuji TanStack Query a nahrazuji Axios pomocí Fetch API.",
+          "Cílem je lépe oddělit formulářový stav od serverových dat a zpřehlednit práci s chybami."
+        ],
+        "nextTitle": "Co připravuji dál",
+        "next": [
+          "Plánuji generovat API klienta ze Swagger/OpenAPI specifikace.",
+          "Chystám se sjednotit lintování projektu.",
+          "Připravím E2E testy instalačního průvodce v Playwrightu."
+        ],
+        "context": "Technické prostředí: backend v Javě, databáze PostgreSQL."
+      },
+      "portfolio": {
+        "label": "Vlastní projekt · Průběžně rozvíjím",
+        "title": "Moje vývojářské portfolio",
+        "description": "Web, na kterém právě jste, propojuje moje projekty, zkušenosti a průběžné učení. Postupně ho upravuji tak, aby byl přehledný pro HR i pro vývojáře.",
+        "learningTitle": "Co jsem si vyzkoušela a naučila se",
+        "learning": [
+          "Práci s Next.js App Routerem, TypeScriptem a česko-anglickými překlady pomocí next-intl.",
+          "Návrh sdílených komponent pro karty, technologické štítky a detaily tutoriálů.",
+          "Sjednocení responzivního rozložení, světlého a tmavého režimu a barevných tokenů.",
+          "Zlepšování čitelnosti, kontrastu a přístupných názvů odkazů i zapojení Vercel Analytics."
+        ],
+        "purposeTitle": "Proč má pro mě portfolio smysl",
+        "purpose": "CV shrnuje moje zkušenosti, portfolio k nim přidává konkrétní ukázky. Na jednom místě můžu ukázat, co tvořím, proč volím určitá řešení a co se dál učím. Pomáhá mi představit způsob přemýšlení i vlastní podíl na projektech, nejen seznam technologií."
       }
     },
     "skills": {
       "eyebrow": "Dovednosti",
-      "title": "Technologie, které používám při vývoji",
-      "description": "Zaměřuji se na frontend ekosystém kolem Reactu, Next.js, TypeScriptu a Tailwind CSS. K tomu přidávám testování, práci s API a praktické nástroje pro vývoj."
+      "title": "Co používám při vývoji",
+      "description": "Zaměřuji se na frontend v Reactu a Next.js. Navazuji na zkušenosti s backendem a testováním, které mi pomáhají přemýšlet o aplikaci jako celku.",
+      "areas": {
+        "frontend": {
+          "title": "Frontend a rozhraní",
+          "description": "Tvořím komponenty, responzivní stránky a formuláře. Pracuji se stavem aplikace, navigací a zobrazením dat."
+        },
+        "backend": {
+          "title": "Backend a data",
+          "description": "Propojuji rozhraní s API a databází. V projektech pracuji s přihlašováním, validací vstupů a chráněnými stránkami."
+        },
+        "testing": {
+          "title": "Testování a ověřování",
+          "description": "Ověřuji uživatelské scénáře, formuláře a chybové stavy. V Reserve App jsem si vyzkoušela E2E test přihlášení a přechodu do dashboardu.",
+          "tags": ["Playwright", "Validace vstupů", "Testování API"]
+        },
+        "workflow": {
+          "title": "Práce s projektem",
+          "description": "Používám Git a GitHub, pracuji s dokumentací API a nasazením aplikací. Zajímá mě, jak spolu frontend, server a databáze fungují i po nasazení."
+        }
+      },
+      "links": {
+        "portfolio": "Portfolio",
+        "habitTracker": "Habit Tracker",
+        "reserve": "Reserve App",
+        "github": "GitHub",
+        "projects": "Projekty"
+      },
+      "learning": {
+        "title": "Co si právě rozšiřuji",
+        "description": "V tutoriálech si zkouším Server Actions, cache v Next.js, Drizzle ORM a přihlašování přes Clerk. Svoje zkušenosti zachycuji u jednotlivých aplikací.",
+        "cta": "Co si zkouším"
+      }
     },
     "contact": {
       "eyebrow": "Kontakt",
@@ -353,6 +450,111 @@
       "location": {
         "title": "Lokalita",
         "description": "Jablonec nad Nisou / remote spolupráce."
+      }
+    },
+    "learning": {
+      "eyebrow": "Co si zkouším",
+      "title": "Učení v praxi",
+      "description": "Učím se na konkrétních příkladech. Tady sdílím vybrané tutoriály, videa a malé experimenty — a co jsem si díky nim vyzkoušela.",
+      "habitTracker": {
+        "label": "YouTube tutoriál · Vyzkoušeno",
+        "title": "Habit Tracker",
+        "description": "Podle tutoriálu jsem vytvořila aplikaci pro sledování návyků v týdenním přehledu. Umožňuje přidávat návyky, označovat splněné dny a vracet se k předchozím týdnům. Data zůstávají uložená v prohlížeči i po obnovení stránky.",
+        "learningTitle": "Co jsem si vyzkoušela",
+        "learning": "Sdílení stavu přes React Context, vlastní hook pro localStorage a práci s daty pomocí date-fns. Procvičila jsem si také typování komponent a výpočet denního pokroku.",
+        "cta": "Co jsem si vyzkoušela",
+        "back": "Zpět na přehled",
+        "intro": "Podle YouTube tutoriálu jsem vytvořila aplikaci pro sledování každodenních návyků v Reactu a TypeScriptu. Na menším projektu jsem si procvičila sdílení stavu, vlastní hooky a práci s daty. Záznamy se ukládají do prohlížeče pomocí localStorage.",
+        "featuresTitle": "Co aplikace obsahuje",
+        "features": [
+          "Přidávání a mazání návyků s kontrolou prázdného názvu.",
+          "Označení i zrušení splnění návyku pro jednotlivé dny.",
+          "Týdenní přehled od pondělí do neděle a procházení minulých týdnů.",
+          "Počet dnes splněných návyků a výpočet série splněných dní od dneška zpět.",
+          "Uchování dat po obnovení stránky ve stejném prohlížeči."
+        ],
+        "learningsTitle": "Co jsem si vyzkoušela a učila se",
+        "learnings": [
+          {
+            "title": "Sdílený stav přes React Context",
+            "description": "HabitProvider spravuje návyky a operace nad nimi. Formulář, seznam i hlavička přistupují ke společnému stavu přes hook useHabits."
+          },
+          {
+            "title": "Vlastní hook pro localStorage",
+            "description": "Generický useLocalStorage načítá uložená data při inicializaci stavu a pomocí useEffect je ukládá při změnách. Při chybě načítání vrací výchozí hodnotu."
+          },
+          {
+            "title": "Datum po uložení do JSON",
+            "description": "Objekt Date se při ukládání převede na text. Při načítání jsem si vyzkoušela převod zpět pomocí funkce předané do JSON.parse a parseISO z date-fns."
+          },
+          {
+            "title": "Týdny a kalendářní dny",
+            "description": "Pomocí date-fns jsem pracovala s týdenními intervaly, posunem mezi týdny a porovnáváním podle kalendářního dne. Přehled používá české názvy dní a měsíců."
+          },
+          {
+            "title": "Aktualizace a odvozené hodnoty",
+            "description": "Přidávání, mazání a přepínání splnění vytváří nová pole a objekty pomocí map, filter a spread syntaxe. Denní pokrok a série se počítají z uložených záznamů."
+          },
+          {
+            "title": "Typované komponenty",
+            "description": "Vyzkoušela jsem si typování návyků, kontextu a vlastností komponent. Sdílené tlačítko podporuje vzhledové varianty i běžné vlastnosti HTML tlačítka."
+          }
+        ],
+        "nextTitle": "Co bych zlepšila dál",
+        "next": [
+          "Doplnit úpravu názvu návyku a sjednotit jazyk rozhraní.",
+          "Ošetřit chybu při zápisu do localStorage a umožnit export dat.",
+          "Upravit výpočet série tak, aby před dnešním splněním zohlednil i sérii končící včera."
+        ]
+      },
+      "ibuiltthis": {
+        "title": "I Built This — katalog projektů",
+        "label": "YouTube tutoriál · Vyzkoušeno",
+        "pitch": "Platforma pro sdílení a objevování projektů s komunitním hlasováním. Vytvořila jsem ji podle tutoriálu v Next.js 16 a vyzkoušela si propojení rozhraní, přihlášení, serverových akcí a databáze.",
+        "cta": "Co jsem si vyzkoušela",
+        "back": "Zpět na přehled",
+        "intro": "Na aplikaci podle YouTube tutoriálu jsem si procvičila cestu od formuláře přes kontrolu vstupů až po uložení a zobrazení dat. Projekt mi poskytl prostor vyzkoušet si frontend i serverovou část v jednom Next.js projektu.",
+        "featuresTitle": "Co aplikace obsahuje",
+        "features": [
+          "Katalog projektů s vyhledáváním a řazením.",
+          "Detail projektu na vlastní URL podle slugu.",
+          "Formulář pro přidání projektu a validaci vstupů.",
+          "Přihlášení přes Clerk a práci s organizacemi.",
+          "Hlasování a administrátorské schválení nebo zamítnutí příspěvků."
+        ],
+        "learningsTitle": "Co jsem si vyzkoušela a učila se",
+        "learnings": [
+          {
+            "title": "Serverové a klientské komponenty",
+            "description": "Rozdělení načítání dat na serveru a interaktivního rozhraní v prohlížeči. Detail projektu používá dynamickou cestu podle slugu a generateStaticParams."
+          },
+          {
+            "title": "Od formuláře k databázi",
+            "description": "Server Actions, validaci pomocí Zodu a useActionState pro stav odesílání a zpětnou vazbu. Vstupy se na serveru ověřují před uložením."
+          },
+          {
+            "title": "Datový model a PostgreSQL",
+            "description": "Definici schématu v Drizzle ORM, migrace a propojení s Neon. Pracovala jsem s unikátním slugem, indexy a načítáním, vkládáním i aktualizací záznamů."
+          },
+          {
+            "title": "Přihlášení a role",
+            "description": "Integraci Clerk, kontrolu přihlášení při přidávání projektů a hlasování a kontrolu administrátorské role na stránce administrace. Vyzkoušela jsem si také práci s organizacemi."
+          },
+          {
+            "title": "Cache a obnovování dat",
+            "description": "Nastavení cacheComponents, direktivu use cache, dynamické načítání přes connection() a použití revalidatePath po změně dat."
+          },
+          {
+            "title": "Interakce v Reactu 19",
+            "description": "Použití useOptimistic a useTransition u hlasování, stav vyhledávání a řazení seznamu. Rozhraní jsem skládala z opakovaně použitelných komponent."
+          }
+        ],
+        "nextTitle": "Co bych zlepšila dál",
+        "next": [
+          "Kontrolovat administrátorská oprávnění i přímo v akcích pro schválení a zamítnutí.",
+          "Evidovat hlasy jednotlivých uživatelů a doplnit zpětnou vazbu při chybě hlasování.",
+          "Ověřit obnovování dat ve všech přehledech po hlasování a schvalování."
+        ]
       }
     }
   }

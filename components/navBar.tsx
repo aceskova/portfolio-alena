@@ -23,6 +23,7 @@ import { type ThemeMode } from '@/lib/theme';
 const navItems = [
   { href: '/about', labelKey: 'about' },
   { href: '/projects', labelKey: 'projects' },
+  { href: '/learning', labelKey: 'learning' },
   { href: '/skills', labelKey: 'skills' },
   { href: '/contact', labelKey: 'contact' },
 ] as const;
@@ -62,7 +63,7 @@ export default function Navbar({ initialTheme }: { initialTheme: ThemeMode }) {
 
   return (
     <header className="sticky top-0 z-50 border-b border-black/5 bg-background/80 backdrop-blur-xl dark:border-white/10">
-      <nav className="mx-auto flex max-w-5xl items-center justify-between px-4 py-3">
+      <nav className="mx-auto flex w-full max-w-5xl items-center justify-between px-5 py-3 sm:px-8">
         <Logo />
 
         <DesktopNav items={navigationLinks} activePathname={pathname} />
@@ -106,16 +107,16 @@ function DesktopNav({
   activePathname: string;
 }) {
   return (
-    <div className="hidden items-center gap-1 md:flex">
+    <div className="hidden items-center gap-1 lg:flex">
       {items.map((item) => (
         <Link
           key={item.href}
           href={item.href}
           aria-current={isActiveNavigationItem(activePathname, item.href) ? 'page' : undefined}
-          className={`rounded-full px-4 py-2 text-lg transition ${
+          className={`whitespace-nowrap rounded-full px-3 py-2 text-base transition ${
             isActiveNavigationItem(activePathname, item.href)
-              ? 'bg-sky-500/10 text-sky-600 dark:text-sky-400'
-              : 'hover:bg-sky-500/10 hover:text-sky-500 text-foreground'
+              ? 'bg-sky-500/10 text-brand-foreground'
+              : 'hover:bg-sky-500/10 hover:text-brand-foreground text-foreground'
           }`}
         >
           {item.label}
@@ -158,7 +159,7 @@ function MobileNav({
   menuDescription: string;
 }) {
   return (
-    <div className="md:hidden">
+    <div className="lg:hidden">
       <Sheet>
         <SheetTrigger asChild>
           <Button variant="ghost" size="icon" aria-label={openMenuLabel}>
@@ -182,8 +183,8 @@ function MobileNav({
                   }
                   className={`rounded-xl px-4 py-3 text-base transition ${
                     isActiveNavigationItem(activePathname, item.href)
-                      ? 'bg-sky-500/10 text-sky-600 dark:text-sky-400'
-                      : 'hover:bg-sky-500/10 hover:text-sky-500 text-foreground'
+                      ? 'bg-sky-500/10 text-brand-foreground'
+                      : 'hover:bg-sky-500/10 hover:text-brand-foreground text-foreground'
                   }`}
                 >
                   {item.label}
